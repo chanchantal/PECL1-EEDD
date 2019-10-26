@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1572088482 source:c:\users\usuario\desktop\practica1\cola.cpp
+	<iostream>
+	"Cola.h"
+	"Taquilla.cpp"
+
+1572087947 c:\users\usuario\desktop\practica1\cola.h
+
+1572088308 source:c:\users\usuario\desktop\practica1\main.cpp
+	<iostream>
+	<stdlib.h>
+	"Cola.h"
+	"Taquilla.cpp"
+
+1572085520 source:c:\users\usuario\desktop\practica1\pila.cpp
+	<iostream>
+	"Pila.h"
+
+1572085520 c:\users\usuario\desktop\practica1\pila.h
+
+1572086941 source:c:\users\usuario\desktop\practica1\coche.cpp
+	<iostream>
+
+1572088001 source:c:\users\usuario\desktop\practica1\taquilla.cpp
+	<iostream>
+	"Cola.h"
+
+1572088001 c:\users\usuario\desktop\practica1\taquilla.cpp
+	<iostream>
+	"Cola.h"
+
