@@ -29,3 +29,28 @@
 	<iostream>
 	"Cola.h"
 
+1572190624 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\pila.cpp
+	<iostream>
+	"Pila.h"
+
+1572197094 c:\users\osman mehmed\documents\pecl1-eedd\practica1\pila.h
+	"nodo.h"
+
+1572190003 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\cola.cpp
+	<iostream>
+	"Cola.h"
+
+1572197084 c:\users\osman mehmed\documents\pecl1-eedd\practica1\cola.h
+	"nodo.h"
+
+1572190350 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\coche.cpp
+	<iostream>
+
+1572190474 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\main.cpp
+	<iostream>
+	<stdlib.h>
+	"cola.h"
+	"Pila.h"
+
+1572197032 c:\users\osman mehmed\documents\pecl1-eedd\practica1\nodo.h
+

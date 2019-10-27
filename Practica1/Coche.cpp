@@ -1,41 +1,22 @@
 #include <iostream>
-#include "cola.h"
-
 using namespace std;
 
-class n1{
+class Coche{
     private: //Atributos
-        string matricula[7];
-        string marca [20];
-        string modelo [20];
-        string color [20];
+        char matricula[7];
+        char marca [20];
+        char modelo [20];
+        char  color [20];
     public:
-        n1 (string,string,string,string);
-};
-
-class n2{
-    private: //Atributos
-        string matricula[7];
-        string marca [20];
-        string modelo [20];
-        string color [20];
-    public:
-        n2 (string,string,string,string);
+        Coche (char,char,char,char);
 };
 
 //Constructor
-n1::n1(string _matricula,string _marca,string _modelo,string _color){
-    matricula = _matricula;
-    marca = _marca;
-    modelo = _modelo;
-    color = _color;
-}
-
-n2::n2(string _matricula,string _marca,string _modelo,string _color){
-    matricula = _matricula;
-    marca = _marca;
-    modelo = _modelo;
-    color = _color;
+Coche::Coche(char matricula,char marca,char modelo,char color){
+    matricula = matricula;
+    marca = marca;
+    modelo = modelo;
+    color = color;
 }
 
 

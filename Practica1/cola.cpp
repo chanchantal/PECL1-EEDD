@@ -1,6 +1,5 @@
 #include <iostream>
 #include "Cola.h"
-#include "Taquilla.cpp"
 
 using namespace std;
 
