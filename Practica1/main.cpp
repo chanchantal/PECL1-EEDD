@@ -1,26 +1,36 @@
 #include <iostream>
 #include <stdlib.h>
+#include <cstdlib>
+#include <string>
 #include "cola.h"
 #include "Pila.h"
+#include "Coche.h"
 
 using namespace std;
 
 int main()
 {
-    Cola taquilla_A;
+    bool acabado = false;
+    string aCode = "0001A";
+    string bCode = "0001B";
 
-    taquilla_A.encolar(14);
-    cout << "Se han añadido coches a la cola " << endl;
-    taquilla_A.encolar(22);
-    cout << "Se han añadido coches a la cola " << endl;
-    cout << "Comprobacion: " << taquilla_A.desencolar() << endl;
+    int x = rand();
+    int y = rand();
+    int z = rand();
+    int n1 = x%4+2;
+    int n2 = y%4+2;
+    Coche* Orilla1[n1];
+    Coche* Orilla2[n2];
 
-    Cola taquilla_B;
-    taquilla_B.encolar(33);
-    cout << "Se han añadido coches a la cola " << endl;
-    taquilla_B.encolar(42);
-    cout << "Se han añadido coches a la cola " << endl;
-    cout << "Comprobacion: " << taquilla_B.desencolar() << endl;
+    while(acabado == false){
 
+        //Print estado barco
+        acabado = true;
+    }
+
+    Cola TaquillaA(aCode);
+    Cola TaquillaB(bCode);
+    TaquillaA.mostrarEtiqueta();
+    TaquillaB.mostrarEtiqueta();
 return 0;
 }

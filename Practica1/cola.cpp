@@ -7,7 +7,9 @@ Cola::~Cola()
 {
     while(frente) desencolar();
 }
-
+void Cola::mostrarEtiqueta(){
+    cout << etiqueta << endl;
+}
 void Cola::encolar(int v)
 {
     pNodo nuevo;
@@ -15,8 +17,6 @@ void Cola::encolar(int v)
     if(final) final -> siguiente = nuevo;
     final = nuevo;
     if(!frente) frente = nuevo;
-
-
 }
 
 int Cola::desencolar()
