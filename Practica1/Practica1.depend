@@ -48,10 +48,12 @@
 	<iostream>
 	"Coche.h"
 
-1572613400 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\main.cpp
+1572617820 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\main.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
+	<ctime>
+	<string>
 	"cola.h"
 	"Pila.h"
 	"Coche.h"
