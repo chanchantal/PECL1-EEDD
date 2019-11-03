@@ -10,6 +10,17 @@ Coche::Coche(string matricula,string marca,string modelo,string color){
     this -> modelo = modelo;
     this -> color = color;
 }
+Coche::Coche(){
+}
+
+void Coche::establecerEstado(string estado){
+    estadoCoche = estado;
+}
+
+string Coche::getMatricula(){
+    return matricula;
+}
+
 
 
 

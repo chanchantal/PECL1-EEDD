@@ -9,8 +9,8 @@ class Pila
     public:
         Pila() : cima(NULL) {}
         ~Pila();
-        void apilar(int v);
-        int desapilar();
+        void apilar(Coche v);
+        Coche desapilar();
         void mostrarCima();
 };
 

@@ -33,6 +33,9 @@ string convertirAString(int numero){
 string generarMatricula(){
     string abecedario[26] = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
     int numeracion = random(100,999);
+    while (numeracion < 100){
+        numeracion = random(100,999);
+    }
     string numeracionString = convertirAString(numeracion);
 
     int y1 = random(0,23);
@@ -62,8 +65,8 @@ Coche generarVehiculo(){
     string modelo = convertirAString(z);
 
 
-    Coche k(matricula,marcaAleatoria,modelo,colorAleatorio);
-    return k;
+    Coche koche(matricula,marcaAleatoria,modelo,colorAleatorio);
+    return koche;
 }
 
 
@@ -71,14 +74,11 @@ int main()
 {
     string aCode = "0001A";
     string bCode = "0001B";
+    Cola TaquillaA(aCode);
+    Cola TaquillaB(bCode);
+    Pila Barco();
 
-    typedef enum estado{OrillaA, OrillaB, NavegandoAB, NavegandoBA};
-    estado estadoBarco = OrillaB;
-
-    string estado1 = "OrillaA";
-    string estado2 = "OrillaB";
-    string estado3 = "NavegandoAB";
-    string estado4 = "NavegandoBA";
+    string estado[4] = {"OrillaA", "OrillaB", "NavegandoAB", "NavegandoBA"};
 
     int n1 = random(2,6);
     int n3 = random(80,120)+80;
@@ -93,18 +93,23 @@ int main()
     cout << n2 << endl;
     cout << n3 << endl;
 
-    Coche* Orilla1[n1];
-    Coche* Orilla2[n2];
+    //Coche* Orilla1[n1];
+    //Coche* Orilla2[n2];
 
+    int contador = 0;
     while(acabado == false){
+            contador++;
+            for (int i = 0; i<= 2 ; i++){
+                TaquillaA.encolar(generarVehiculo());
+                cout << "se genera" << endl;
+            }
+            for (int i = 0; i<= n2 ; i++){
+                TaquillaB.encolar(generarVehiculo());
+            }
 
-        //Print estado barco
-        acabado = true;
+            cout << (TaquillaA.desencolar()).getMatricula() << endl;
+            cout << (TaquillaA.desencolar()).getMatricula() << endl;
+            acabado = true;
     }
-
-    Cola TaquillaA(aCode);
-    Cola TaquillaB(bCode);
-    TaquillaA.mostrarEtiqueta();
-    TaquillaB.mostrarEtiqueta();
 return 0;
 }

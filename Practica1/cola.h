@@ -1,7 +1,9 @@
 #ifndef COLA_H_INCLUDED
 #define COLA_H_INCLUDED
 #include <string>
+#include <stddef.h>
 #include "nodo.h"
+#include "Coche.h"
 
 using namespace std;
 
@@ -15,8 +17,8 @@ class Cola
             etiqueta = codigo;
         }
         ~Cola();
-        void encolar(int v);
-        int desencolar();
+        void encolar(Coche v);
+        Coche desencolar();
         void mostrarEtiqueta();
 };
 

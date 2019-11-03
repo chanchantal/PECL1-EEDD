@@ -1,15 +1,16 @@
 #ifndef NODO_H_INCLUDED
 #define NODO_H_INCLUDED
+#include "Coche.h"
 
 class Nodo
 {
     private:
-        int valor;
+        Coche valor;
         Nodo *siguiente;
         friend class Cola;
         friend class Pila;
     public:
-        Nodo(int v, Nodo *sig = NULL)
+        Nodo(Coche v, Nodo *sig = NULL)
         {
             valor = v;
             siguiente = sig;

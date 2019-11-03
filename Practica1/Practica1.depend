@@ -29,27 +29,29 @@
 	<iostream>
 	"Cola.h"
 
-1572197111 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\pila.cpp
+1572813881 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\pila.cpp
 	<iostream>
 	"Pila.h"
 
-1572604925 c:\users\osman mehmed\documents\pecl1-eedd\practica1\pila.h
+1572809874 c:\users\osman mehmed\documents\pecl1-eedd\practica1\pila.h
 	"nodo.h"
 
-1572612959 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\cola.cpp
+1572811323 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\cola.cpp
 	<iostream>
 	"Cola.h"
 
-1572613916 c:\users\osman mehmed\documents\pecl1-eedd\practica1\cola.h
+1572809391 c:\users\osman mehmed\documents\pecl1-eedd\practica1\cola.h
 	<string>
+	<stddef.h>
 	"nodo.h"
+	"Coche.h"
 
-1572802015 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\coche.cpp
+1572813836 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\coche.cpp
 	<iostream>
 	"Coche.h"
 	<string>
 
-1572801115 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\main.cpp
+1572814098 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\main.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -60,8 +62,9 @@
 	"Pila.h"
 	"Coche.h"
 
-1572197032 c:\users\osman mehmed\documents\pecl1-eedd\practica1\nodo.h
+1572808793 c:\users\osman mehmed\documents\pecl1-eedd\practica1\nodo.h
+	"Coche.h"
 
-1572802015 c:\users\osman mehmed\documents\pecl1-eedd\practica1\coche.h
+1572813870 c:\users\osman mehmed\documents\pecl1-eedd\practica1\coche.h
 	<string>
 

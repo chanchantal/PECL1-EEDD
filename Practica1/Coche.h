@@ -14,6 +14,8 @@ class Coche{
     public:
         Coche(string,string,string,string);
         Coche();
+        void establecerEstado(string estado);
+        string getMatricula();
 };
 
 #endif // COCHE_H_INCLUDED

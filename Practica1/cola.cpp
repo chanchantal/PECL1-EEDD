@@ -1,6 +1,5 @@
 #include <iostream>
 #include "Cola.h"
-
 using namespace std;
 
 Cola::~Cola()
@@ -10,7 +9,7 @@ Cola::~Cola()
 void Cola::mostrarEtiqueta(){
     cout << etiqueta << endl;
 }
-void Cola::encolar(int v)
+void Cola::encolar(Coche v)
 {
     pNodo nuevo;
     nuevo = new Nodo(v);
@@ -19,14 +18,14 @@ void Cola::encolar(int v)
     if(!frente) frente = nuevo;
 }
 
-int Cola::desencolar()
+Coche Cola::desencolar()
 {
     pNodo nodo;
-    int v;
+    Coche v;
     nodo = frente;
-    if(!nodo) return 0;
+    if(!nodo) return v;
     frente = nodo -> siguiente;
-    v = nodo->valor;
+    v = nodo -> valor;
     delete nodo;
     if(!frente) final = NULL;
     return v;
