@@ -1,15 +1,18 @@
 #ifndef COCHE_H_INCLUDED
 #define COCHE_H_INCLUDED
+#include <string>
+
+using namespace std;
 
 class Coche{
     private:
-        char matricula;
-        char marca;
-        char modelo;
-        char color;
-        char estadoCoche;
+        string matricula;
+        string marca;
+        string modelo;
+        string color;
+        string estadoCoche;
     public:
-        Coche(char,char,char,char,char);
+        Coche(string,string,string,string);
         Coche();
 };
 

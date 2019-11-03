@@ -44,21 +44,24 @@
 	<string>
 	"nodo.h"
 
-1572605341 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\coche.cpp
+1572802015 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\coche.cpp
 	<iostream>
 	"Coche.h"
+	<string>
 
-1572617820 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\main.cpp
+1572801115 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\main.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
 	<ctime>
 	<string>
+	<sstream>
 	"cola.h"
 	"Pila.h"
 	"Coche.h"
 
 1572197032 c:\users\osman mehmed\documents\pecl1-eedd\practica1\nodo.h
 
-1572612407 c:\users\osman mehmed\documents\pecl1-eedd\practica1\coche.h
+1572802015 c:\users\osman mehmed\documents\pecl1-eedd\practica1\coche.h
+	<string>
 
