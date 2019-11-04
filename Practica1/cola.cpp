@@ -11,6 +11,7 @@ void Cola::mostrarEtiqueta(){
 }
 void Cola::encolar(Coche v)
 {
+    cout << "Entra en la cola " << etiqueta << ",un coche de matricula: " << v.getMatricula() << endl;
     pNodo nuevo;
     nuevo = new Nodo(v);
     if(final) final -> siguiente = nuevo;

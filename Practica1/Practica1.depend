@@ -36,7 +36,7 @@
 1572809874 c:\users\osman mehmed\documents\pecl1-eedd\practica1\pila.h
 	"nodo.h"
 
-1572811323 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\cola.cpp
+1572887526 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\cola.cpp
 	<iostream>
 	"Cola.h"
 
@@ -51,7 +51,7 @@
 	"Coche.h"
 	<string>
 
-1572814098 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\main.cpp
+1572887583 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\main.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>

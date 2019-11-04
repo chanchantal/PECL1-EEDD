@@ -44,7 +44,9 @@ string generarMatricula(){
         y2 = random(0,23);
     }
     int y3 = random(0,23);
-
+    while (y2 == y3){
+        y3 = random(0,23);
+    }
     string letra1 = abecedario[y1];
     string letra2 = abecedario[y2];
     string letra3 = abecedario[y3];
@@ -99,12 +101,12 @@ int main()
     int contador = 0;
     while(acabado == false){
             contador++;
-            for (int i = 0; i<= 2 ; i++){
+            for (int i = 1; i<= n1 ; i++){
                 TaquillaA.encolar(generarVehiculo());
-                cout << "se genera" << endl;
             }
-            for (int i = 0; i<= n2 ; i++){
+            for (int i = 1; i<= n2 ; i++){
                 TaquillaB.encolar(generarVehiculo());
+
             }
 
             cout << (TaquillaA.desencolar()).getMatricula() << endl;
