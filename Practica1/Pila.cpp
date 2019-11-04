@@ -12,7 +12,11 @@ Coche Pila::desapilar()
     cima= nodo -> siguiente;
     v = nodo -> valor;
     delete nodo;
+    cargaBarco--;
     return v;
+}
+int Pila::getCarga(){
+    return cargaBarco;
 }
 
 Pila::~Pila()
@@ -20,11 +24,16 @@ Pila::~Pila()
     while(cima) desapilar();
 }
 
+string Pila::getEstado(){
+    return estadoBarco;
+}
+
 void Pila::apilar(Coche v)
 {
     pNodo nuevo;
     nuevo = new Nodo(v, cima);
     cima = nuevo;
+    cargaBarco++;
 }
 
 void Pila::mostrarCima()

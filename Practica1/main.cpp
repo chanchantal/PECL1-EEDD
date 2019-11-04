@@ -78,40 +78,46 @@ int main()
     string bCode = "0001B";
     Cola TaquillaA(aCode);
     Cola TaquillaB(bCode);
-    Pila Barco();
 
-    string estado[4] = {"OrillaA", "OrillaB", "NavegandoAB", "NavegandoBA"};
 
-    int n1 = random(2,6);
+    string estado[4] = {"OrillaA", "NavegandoAB", "OrillaB","NavegandoBA"};
+    int estadoComienzo = random(0,3);
+    Pila Barco(estado[estadoComienzo]);
+
     int n3 = random(80,120)+80;
-    int n2 = random(2,6);
 
     bool acabado = false;
-    while(n1 == n2){
-        n2 = random(2,6);
-    }
-
-    cout << n1 << endl;
-    cout << n2 << endl;
-    cout << n3 << endl;
-
-    //Coche* Orilla1[n1];
-    //Coche* Orilla2[n2];
-
     int contador = 0;
+    int cochesGeneradosA;
+    int cochesGeneradosB;
     while(acabado == false){
-            contador++;
+        contador++;
+        cout << "Quedan " << n3 << " vehiculos por generarse" << endl;
+        cout << "El barco se encuentra: " << Barco.getEstado() << endl;
+        if (n3>0){
+            int n1 = random(2,6);
+            while (n3-n1 < 0){
+                n1 = random(2,6);
+            }
+            n3 = n3-n1;
+            cochesGeneradosA = cochesGeneradosA + n1;
+
             for (int i = 1; i<= n1 ; i++){
                 TaquillaA.encolar(generarVehiculo());
             }
-            for (int i = 1; i<= n2 ; i++){
-                TaquillaB.encolar(generarVehiculo());
 
+            if (n3 >0){
+                int n2 = random(2,6);
+                while(n3-n2 < 0 && n1==n2){
+                    n2 = random(2,6);
+                }
+                cochesGeneradosB = cochesGeneradosB + n2;
+                n3 = n3-n2;
+                for (int i = 1; i<= n2 ; i++){
+                    TaquillaB.encolar(generarVehiculo());
+                }
             }
-
-            cout << (TaquillaA.desencolar()).getMatricula() << endl;
-            cout << (TaquillaA.desencolar()).getMatricula() << endl;
-            acabado = true;
+        }
     }
 return 0;
 }
