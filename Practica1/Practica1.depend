@@ -37,11 +37,11 @@
 	"nodo.h"
 	<string>
 
-1572954664 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\cola.cpp
+1572967147 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\cola.cpp
 	<iostream>
 	"Cola.h"
 
-1572954241 c:\users\osman mehmed\documents\pecl1-eedd\practica1\cola.h
+1572967147 c:\users\osman mehmed\documents\pecl1-eedd\practica1\cola.h
 	<string>
 	<stddef.h>
 	"nodo.h"

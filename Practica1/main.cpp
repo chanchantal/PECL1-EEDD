@@ -79,6 +79,10 @@ int main()
     Cola EmbarcaderoA("0002A");
     Cola EmbarcaderoB("0002B");
 
+    cout << "Se ha generado la cola " << TaquillaA.getEtiqueta() << ",como Taquilla A" << endl;
+    cout << "Se ha generado la cola " << TaquillaB.getEtiqueta() << ",como Taquilla B" << endl;
+    cout << "Se ha generado la cola " << EmbarcaderoA.getEtiqueta() << ",como Embarcadero A" << endl;
+    cout << "Se ha generado la cola " << EmbarcaderoB.getEtiqueta() << ",como Embarcadero B" << endl;
 
     string estado[4] = {"OrillaA", "NavegandoAB", "OrillaB","NavegandoBA"};
     int posicionBarco = random(0,3);
@@ -87,7 +91,7 @@ int main()
     int n3 = 30; //random(80,120)+80;
     int n4 = 10;
     int n5 = 7;
-    int n6 = 8;
+    int n6 = 14;
     bool acabado = false;
     int contador = 0;
     int cochesGeneradosA,cochesGeneradosB,n1,n2,h;
@@ -133,47 +137,56 @@ int main()
 
         while(EmbarcaderoA.getTamano() < n4 && TaquillaA.getTamano() > 0){
             EmbarcaderoA.encolar(TaquillaA.desencolar());
-            cout << "Desencolo A y encolo a embarcadero" << endl;
         }
         while(EmbarcaderoB.getTamano()< n4 && TaquillaB.getTamano() > 0){
             EmbarcaderoB.encolar(TaquillaB.desencolar());
-            cout << "Desencolo B y encolo a embarcadero" << endl;
         }
 
         cout << Barco.getEstado() << endl;
         if (Barco.getEstado() == estado[0] && Barco.getCarga() > 0){
             while(Barco.getCarga() > 0){
-                    cout << "Se ha desapilado: " << (Barco.desapilar()).getMatricula() << "En la orilla " << estado[0] << endl;
+                    cout << "Se ha desapilado: " << (Barco.desapilar()).getMatricula() << ",En la orilla " << estado[0] << endl;
             }
         }
 
         if (Barco.getEstado() == estado[2] && Barco.getCarga() > 0){
             while(Barco.getCarga() > 0){
-                    cout << "Se ha desapilado: " << (Barco.desapilar()).getMatricula() << "En la orilla " << estado[2] << endl;
+                    cout << "Se ha desapilado: " << (Barco.desapilar()).getMatricula() << ",En la orilla " << estado[2] << endl;
             }
         }
 
         if (Barco.getEstado() == estado[0] && (EmbarcaderoA.getTamano() == n4 || n3 == 0)){
             h = n5;
-            while (EmbarcaderoA.getTamano() > 0 && h > 0 ){
+            while (EmbarcaderoA.getTamano() > 0 && h > 0 && Barco.getCarga() < n6){
                 Barco.apilar(EmbarcaderoA.desencolar());
                 h--;
             }
+
         } else if (Barco.getEstado() == estado[2] && (EmbarcaderoB.getTamano() == n4 || n3 == 0)){
             h = n5;
-            while (EmbarcaderoB.getTamano() > 0 && h > 0 ){
+            while (EmbarcaderoB.getTamano() > 0 && h > 0 && Barco.getCarga() < n6 ){
                 Barco.apilar(EmbarcaderoB.desencolar());
                 h--;
             }
         }
-        posicionBarco++;
+        if ((Barco.getCarga() == n6 || Barco.getEstado() == estado[1] || Barco.getEstado() == estado[3])){
+            posicionBarco++;
+        }
         if (posicionBarco > 3){
             posicionBarco = 0;
         }
+        cout << "esto?" << endl;
         Barco.setEstado(estado[posicionBarco]);
-        cout << Barco.getCarga() << endl;
 
-        cout << " \n========== REINICIO ================" << endl;
+        cout << "\n** Hay " << Barco.getCarga() << " elemenetos en el barco" << endl;
+        cout << "** El tamano de " << TaquillaA.getEtiqueta() << " es de: " << TaquillaA.getTamano() << endl;
+        cout << "** El tamano de " << TaquillaB.getEtiqueta() << " es de: " << TaquillaB.getTamano() << endl;
+        cout << "** El tamano de " << EmbarcaderoA.getEtiqueta() << " es de: " << EmbarcaderoA.getTamano() << endl;
+        cout << "** El tamano de " << EmbarcaderoB.getEtiqueta() << " es de: " << EmbarcaderoB.getTamano() << endl;
+
+
+
+        cout << " \n=====================================" << endl;
         cout << " Pulse <Enter> para seguir el turno\n\n" << endl;
         cin.get();
     }

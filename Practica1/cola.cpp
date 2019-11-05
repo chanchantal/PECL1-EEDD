@@ -6,8 +6,8 @@ Cola::~Cola()
 {
     while(frente) desencolar();
 }
-void Cola::mostrarEtiqueta(){
-    cout << etiqueta << endl;
+string Cola::getEtiqueta(){
+    return etiqueta;
 }
 void Cola::encolar(Coche v)
 {
@@ -18,7 +18,6 @@ void Cola::encolar(Coche v)
     final = nuevo;
     if(!frente) frente = nuevo;
     tamano++;
-    cout << tamano << etiqueta << endl;
 }
 
 Coche Cola::desencolar()
@@ -33,7 +32,6 @@ Coche Cola::desencolar()
     if(!frente) final = NULL;
 
     tamano--;
-    cout << tamano << etiqueta << endl;
     return v;
 }
 int Cola::getTamano(){

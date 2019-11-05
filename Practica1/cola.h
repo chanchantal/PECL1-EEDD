@@ -21,7 +21,7 @@ class Cola
         ~Cola();
         void encolar(Coche v);
         Coche desencolar();
-        void mostrarEtiqueta();
+        string getEtiqueta();
         int getTamano();
 };
 
