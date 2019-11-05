@@ -47,12 +47,12 @@
 	"nodo.h"
 	"Coche.h"
 
-1572813836 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\coche.cpp
+1572971106 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\coche.cpp
 	<iostream>
 	"Coche.h"
 	<string>
 
-1572961898 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\main.cpp
+1572980758 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\main.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
