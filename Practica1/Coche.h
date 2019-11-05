@@ -14,6 +14,13 @@ class Coche{
         Coche(string,string,string,string);
         Coche();
         string getMatricula();
+        string getMarca();
+        string getModelo();
+        string getColor();
+        void setMatricula(string strMatricula);
+        void setMarca(string strMarca);
+        void setModelo(string strModelo);
+        void setColor(string strColor);
 };
 
 #endif // COCHE_H_INCLUDED
