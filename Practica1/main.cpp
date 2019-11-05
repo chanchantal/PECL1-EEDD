@@ -74,49 +74,75 @@ Coche generarVehiculo(){
 
 int main()
 {
-    string aCode = "0001A";
-    string bCode = "0001B";
-    Cola TaquillaA(aCode);
-    Cola TaquillaB(bCode);
+    Cola TaquillaA("0001A");
+    Cola TaquillaB("0001B");
+    Cola EmbarcaderoA("0002A");
+    Cola EmbarcaderoB("0002B");
 
 
     string estado[4] = {"OrillaA", "NavegandoAB", "OrillaB","NavegandoBA"};
     int estadoComienzo = random(0,3);
     Pila Barco(estado[estadoComienzo]);
 
-    int n3 = random(80,120)+80;
-
+    int n3 = 10; //random(80,120)+80;
+    int n4 = 4;
     bool acabado = false;
     int contador = 0;
-    int cochesGeneradosA;
-    int cochesGeneradosB;
+    int cochesGeneradosA,cochesGeneradosB,n1,n2,enter;
+
     while(acabado == false){
         contador++;
         cout << "Quedan " << n3 << " vehiculos por generarse" << endl;
         cout << "El barco se encuentra: " << Barco.getEstado() << endl;
         if (n3>0){
-            int n1 = random(2,6);
-            while (n3-n1 < 0){
-                n1 = random(2,6);
+            if (n3 == 1){
+                n1 = 1;
+            } else {
+                    n1 = random(2,6);
+                while (n3-n1 < 0){
+                    n1 = random(2,6);
+                }
             }
+            cout << "n1: " << n1 << endl;
             n3 = n3-n1;
             cochesGeneradosA = cochesGeneradosA + n1;
 
-            for (int i = 1; i<= n1 ; i++){
+            for (int i = 1; i< n1+1 ; i++){
                 TaquillaA.encolar(generarVehiculo());
             }
 
             if (n3 >0){
-                int n2 = random(2,6);
-                while(n3-n2 < 0 && n1==n2){
-                    n2 = random(2,6);
+                if (n3 == 1){
+                    n2 = 1;
+                } else {
+                        n2 = random(2,6);
+                    while(n3-n2 < 0){
+                        n2 = random(2,6);
+                    }
                 }
                 cochesGeneradosB = cochesGeneradosB + n2;
                 n3 = n3-n2;
-                for (int i = 1; i<= n2 ; i++){
+                cout <<"n2 : " << n2 << endl;
+                for (int i = 1; i< n2+1 ; i++){
                     TaquillaB.encolar(generarVehiculo());
                 }
             }
+        }
+
+        while(EmbarcaderoA.getTamano() < n4 && TaquillaA.getTamano() > 0){
+            EmbarcaderoA.encolar(TaquillaA.desencolar());
+            cout << "Desencolo A y encolo a embarcadero" << endl;
+        }
+        while(EmbarcaderoB.getTamano()< n4 && TaquillaB.getTamano() > 0){
+            EmbarcaderoB.encolar(TaquillaB.desencolar());
+            cout << "Desencolo B y encolo a embarcadero" << endl;
+        }
+
+
+        cout << " \n========== REINICIO ================" << endl;
+        cout << " Pulse <Enter> para seguir el turno\n\n" << endl;
+        while(enter != '\n'){
+                cin >> enter;
         }
     }
 return 0;

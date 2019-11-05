@@ -17,6 +17,8 @@ void Cola::encolar(Coche v)
     if(final) final -> siguiente = nuevo;
     final = nuevo;
     if(!frente) frente = nuevo;
+    tamano++;
+    cout << tamano << etiqueta << endl;
 }
 
 Coche Cola::desencolar()
@@ -29,7 +31,13 @@ Coche Cola::desencolar()
     v = nodo -> valor;
     delete nodo;
     if(!frente) final = NULL;
+
+    tamano--;
+    cout << tamano << etiqueta << endl;
     return v;
+}
+int Cola::getTamano(){
+    return tamano;
 }
 
 
