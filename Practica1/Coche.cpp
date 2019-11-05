@@ -17,7 +17,30 @@ string Coche::getMatricula(){
     return matricula;
 }
 
+string Coche::getMarca(){
+    return marca;
+}
 
+string Coche::getModelo(){
+    return modelo;
+}
 
+string Coche::getColor(){
+    return color;
+}
 
+void Coche::setMatricula(string strMatricula){
+    matricula=strMatricula;
+}
 
+void Coche::setMarca(string strMarca){
+    marca=strMarca;
+}
+
+void Coche::setModelo(string strModelo){
+    modelo=strModelo;
+}
+
+void Coche::setColor(string strColor){
+    color=strColor;
+}
