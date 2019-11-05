@@ -13,10 +13,6 @@ Coche::Coche(string matricula,string marca,string modelo,string color){
 Coche::Coche(){
 }
 
-void Coche::establecerEstado(string estado){
-    estadoCoche = estado;
-}
-
 string Coche::getMatricula(){
     return matricula;
 }

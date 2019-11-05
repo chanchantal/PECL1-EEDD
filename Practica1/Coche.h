@@ -10,11 +10,9 @@ class Coche{
         string marca;
         string modelo;
         string color;
-        string estadoCoche;
     public:
         Coche(string,string,string,string);
         Coche();
-        void establecerEstado(string estado);
         string getMatricula();
 };
 
