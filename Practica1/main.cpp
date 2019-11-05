@@ -100,9 +100,38 @@ int main()
     cout << "**El valor de n6 es de: " << n6 << "\n" << endl;
     bool acabado = false;
     int contador = 0;
-    int cochesGeneradosA,cochesGeneradosB,n1,n2,h,cuenta;
+    int cochesGeneradosA,cochesGeneradosB,n1,n2,h,cuenta,decision;
     bool descargarYa;
-
+    cout << "Desea introducir un coche propio?, de ser asi introduzca el valor '1'" << endl;
+    cin >> decision;
+    if (decision == 1){
+        cout << "De acuerdo, establezca primero la marca del coche" << endl;
+        string marca;
+        cin >> marca;
+        cout << "Establezca la matricula del coche" << endl;
+        string matricula;
+        cin >> matricula;
+        cout << "Establezca el color del coche" << endl;
+        string color;
+        cin >> color;
+        cout << "Establezca el modelo del coche" << endl;
+        string modelo;
+        cin >> modelo;
+        Coche coche1(matricula,marca,modelo,color);
+        cout << "Su coche ha sido generado y se va a proceder a encolar, que cola prefiere A o B" << endl;
+        string cola;
+        cin >> cola;
+        while(cola != "A" && cola != "B"){
+            cout << "Su coche ha sido generado y se va a proceder a encolar, que cola prefiere A o B" << endl;
+            cin >> cola;
+        }
+        cout << "Su coche va a ser introducido en la cola: " << cola << endl;
+        if (cola == "A"){
+            TaquillaA.encolar(coche1);
+        } else if (cola == "B"){
+            TaquillaB.encolar(coche1);
+        }
+    }
     while(acabado == false){
         contador++;
         cout << "\n### Quedan " << n3 << " vehiculos por generarse" << endl;

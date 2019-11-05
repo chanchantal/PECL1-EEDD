@@ -41,18 +41,17 @@
 	<iostream>
 	"Cola.h"
 
-1572967147 c:\users\osman mehmed\documents\pecl1-eedd\practica1\cola.h
+1572986852 c:\users\osman mehmed\documents\pecl1-eedd\practica1\cola.h
 	<string>
-	<stddef.h>
 	"nodo.h"
 	"Coche.h"
 
-1572971106 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\coche.cpp
+1572981809 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\coche.cpp
 	<iostream>
 	"Coche.h"
 	<string>
 
-1572981626 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\main.cpp
+1572995566 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\main.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>

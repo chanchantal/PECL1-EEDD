@@ -1,7 +1,6 @@
 #ifndef COLA_H_INCLUDED
 #define COLA_H_INCLUDED
 #include <string>
-#include <stddef.h>
 #include "nodo.h"
 #include "Coche.h"
 
