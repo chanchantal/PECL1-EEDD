@@ -28,11 +28,16 @@ string Pila::getEstado(){
     return estadoBarco;
 }
 
+void Pila::setEstado(string estado){
+    estadoBarco = estado;
+}
+
 void Pila::apilar(Coche v)
 {
     pNodo nuevo;
     nuevo = new Nodo(v, cima);
     cima = nuevo;
+    cout << "Se ha apilado: " << v.getMatricula() << endl;
     cargaBarco++;
 }
 

@@ -81,14 +81,16 @@ int main()
 
 
     string estado[4] = {"OrillaA", "NavegandoAB", "OrillaB","NavegandoBA"};
-    int estadoComienzo = random(0,3);
-    Pila Barco(estado[estadoComienzo]);
+    int posicionBarco = random(0,3);
+    Pila Barco(estado[posicionBarco]);
 
-    int n3 = 10; //random(80,120)+80;
-    int n4 = 4;
+    int n3 = 30; //random(80,120)+80;
+    int n4 = 10;
+    int n5 = 7;
+    int n6 = 8;
     bool acabado = false;
     int contador = 0;
-    int cochesGeneradosA,cochesGeneradosB,n1,n2,enter;
+    int cochesGeneradosA,cochesGeneradosB,n1,n2,h;
 
     while(acabado == false){
         contador++;
@@ -138,12 +140,42 @@ int main()
             cout << "Desencolo B y encolo a embarcadero" << endl;
         }
 
+        cout << Barco.getEstado() << endl;
+        if (Barco.getEstado() == estado[0] && Barco.getCarga() > 0){
+            while(Barco.getCarga() > 0){
+                    cout << "Se ha desapilado: " << (Barco.desapilar()).getMatricula() << "En la orilla " << estado[0] << endl;
+            }
+        }
+
+        if (Barco.getEstado() == estado[2] && Barco.getCarga() > 0){
+            while(Barco.getCarga() > 0){
+                    cout << "Se ha desapilado: " << (Barco.desapilar()).getMatricula() << "En la orilla " << estado[2] << endl;
+            }
+        }
+
+        if (Barco.getEstado() == estado[0] && (EmbarcaderoA.getTamano() == n4 || n3 == 0)){
+            h = n5;
+            while (EmbarcaderoA.getTamano() > 0 && h > 0 ){
+                Barco.apilar(EmbarcaderoA.desencolar());
+                h--;
+            }
+        } else if (Barco.getEstado() == estado[2] && (EmbarcaderoB.getTamano() == n4 || n3 == 0)){
+            h = n5;
+            while (EmbarcaderoB.getTamano() > 0 && h > 0 ){
+                Barco.apilar(EmbarcaderoB.desencolar());
+                h--;
+            }
+        }
+        posicionBarco++;
+        if (posicionBarco > 3){
+            posicionBarco = 0;
+        }
+        Barco.setEstado(estado[posicionBarco]);
+        cout << Barco.getCarga() << endl;
 
         cout << " \n========== REINICIO ================" << endl;
         cout << " Pulse <Enter> para seguir el turno\n\n" << endl;
-        while(enter != '\n'){
-                cin >> enter;
-        }
+        cin.get();
     }
 return 0;
 }

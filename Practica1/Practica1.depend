@@ -29,11 +29,11 @@
 	<iostream>
 	"Cola.h"
 
-1572889944 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\pila.cpp
+1572962661 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\pila.cpp
 	<iostream>
 	"Pila.h"
 
-1572889944 c:\users\osman mehmed\documents\pecl1-eedd\practica1\pila.h
+1572959250 c:\users\osman mehmed\documents\pecl1-eedd\practica1\pila.h
 	"nodo.h"
 	<string>
 
@@ -52,7 +52,7 @@
 	"Coche.h"
 	<string>
 
-1572955289 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\main.cpp
+1572961898 source:c:\users\osman mehmed\documents\pecl1-eedd\practica1\main.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>

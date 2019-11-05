@@ -12,6 +12,7 @@ class Pila
     public:
         Pila(string estado) : cima(NULL) {
             estadoBarco = estado;
+            cargaBarco = 0;
         }
         ~Pila();
         void apilar(Coche v);
@@ -19,6 +20,7 @@ class Pila
         void mostrarCima();
         string getEstado();
         int getCarga();
+        void setEstado(string estado);
 };
 
 #endif // PILAS_H_INCLUDED
